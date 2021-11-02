@@ -2326,3 +2326,6 @@ details-disclosure > details {
   }
 }
 
+body {
+  font-family:'Courier New', Courier, monospace;
+}
