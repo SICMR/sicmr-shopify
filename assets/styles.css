@@ -1,2 +1,137 @@
 body {
-  border: 20px solid green; }
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 19px;
+  color: #010101; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Courier New Bold', Courier, monospace;
+  color: #0000ff; }
+
+.page-width {
+  padding: 0 12rem; }
+
+#shopify-section-announcement-bar {
+  display: none; }
+
+#shopify-section-header {
+  padding-top: 100px; }
+  #shopify-section-header .header-wrapper {
+    border: none; }
+    #shopify-section-header .header-wrapper .header__heading {
+      display: none; }
+    #shopify-section-header .header-wrapper .header__heading-link .h2 {
+      display: block;
+      color: #0000ff;
+      font-size: 30px;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.1em; }
+    #shopify-section-header .header-wrapper .header__inline-menu {
+      display: none; }
+    #shopify-section-header .header-wrapper .header__search {
+      display: none; }
+    #shopify-section-header .header-wrapper .header__icon--cart {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: normal;
+      text-decoration: none;
+      border: 1px solid #010101;
+      width: auto;
+      height: auto;
+      padding: 0 0.5em;
+      cursor: pointer; }
+
+#shopify-section-footer .footer {
+  border: none; }
+  #shopify-section-footer .footer__blocks-wrapper .footer-block:nth-of-type(2) {
+    display: none; }
+  #shopify-section-footer .footer__blocks-wrapper .footer-block__heading {
+    display: none; }
+  #shopify-section-footer .footer__blocks-wrapper .footer-block__details-content .list-menu__item--link {
+    font-weight: bold;
+    font-size: 18px;
+    color: #0000ff;
+    text-transform: uppercase;
+    letter-spacing: 0.12em; }
+  #shopify-section-footer .footer__list-social {
+    justify-content: flex-end; }
+    #shopify-section-footer .footer__list-social .list-social__item .icon {
+      width: 3.5rem;
+      height: 3.5rem; }
+  #shopify-section-footer .footer__content-top {
+    padding-bottom: 0; }
+  #shopify-section-footer .footer__content-bottom {
+    padding-top: 0;
+    border: none; }
+  #shopify-section-footer .footer__copyright.caption {
+    font-size: 14px;
+    font-weight: bold; }
+
+.featured-product {
+  align-items: center; }
+  .featured-product__title {
+    text-transform: uppercase;
+    color: #0000ff;
+    font-size: 30px;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.1em; }
+  .featured-product .product__thumbnails-wrapper {
+    width: 100px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    margin-right: 7vw; }
+    .featured-product .product__thumbnails-wrapper img {
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+      border: 1px solid transparent;
+      margin-bottom: 10px; }
+      .featured-product .product__thumbnails-wrapper img.active, .featured-product .product__thumbnails-wrapper img:hover {
+        border: 1px solid #010101; }
+  .featured-product .product__media-wrapper .product__modal-opener {
+    border: none; }
+    .featured-product .product__media-wrapper .product__modal-opener .product__media-icon {
+      display: none; }
+    .featured-product .product__media-wrapper .product__modal-opener .product__media-toggle:hover {
+      cursor: default; }
+  .featured-product .product__info-wrapper {
+    padding: 0 !important;
+    width: auto;
+    flex-grow: 0;
+    margin-left: 7vw; }
+  .featured-product .product__info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .featured-product .product-form__input {
+    display: flex;
+    flex-direction: column; }
+    .featured-product .product-form__input input[type='radio'] + label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: normal;
+      font-size: 25px;
+      border-radius: 0;
+      border: 1px solid transparent;
+      width: 55px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; }
+    .featured-product .product-form__input input[type='radio']:checked + label {
+      position: relative;
+      background-color: transparent;
+      border: 1px solid #010101;
+      color: #010101; }
+      .featured-product .product-form__input input[type='radio']:checked + label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: rotate(-45deg);
+        width: 100%;
+        height: 1px;
+        background-color: #010101; }
