@@ -18,6 +18,37 @@
 
 <section class="{% if section.settings.secondary_background %}background-secondary{% else %}spaced-section{% endif %}">
   <div class="page-width">
+    <div id="js-content-modal" class="content-modal">
+      <span id="js-close-x-btn">X</span>
+      <div id="legal">
+        <ul>
+          <li><a href="#">PRIVACY POLICY</a></li>
+          <li><a href="#">RETURN POLICY</a></li>
+          <li><a href="#">TERMS AND CONDITIONS OF SALE</a></li>
+          <li><a href="#">TERMS AND CONDITIONS OF USE</a></li>
+        </ul>
+      </div>
+      <div id="contact">contact</div>
+      <div id="info-and-sizing">
+        <div class="inner">
+          <div class="copy">
+            <h3>INFO & SIZING</h3>
+            <p>Mattis enim ut tellus elementum sagittis vitae. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Duis ut diam quam nulla. Nibh venenatis cras sed felis eget velit aliquet sagittis. Arcu non odio euismod lacinia. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Ipsum nunc aliquet bibendum enim facilisis gravida.</p>
+            <p>Sed lectus vestibulum mattis ullamcorper velit sed. Nisi vitae suscipit tellus mauris a diam. Et netus et malesuada fames ac. Enim nunc faucibus a pellentesque sit amet. Dignissim convallis aenean et tortor. Ac tortor vitae purus faucibus ornare suspendisse sed nisi. Suspendisse faucibus interdum posuere lorem ipsum dolor. Faucibus nisl tincidunt eget nullam non nisi est sit. Sit amet volutpat consequat mauris nunc congue. </p>
+          </div>
+        </div>
+      </div>
+      <div id="description">
+        <div class="inner">
+          <div class="image">
+            <img src="{{ product | img_url: '1024x' }}" alt="">
+          </div>
+          <div class="copy">
+            {{ product.description }}
+          </div>
+        </div>
+      </div>
+    </div>
     <h2 class="featured-product__title">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -94,34 +125,7 @@
           </button>
         {%- endif -%}
       </div>
-      {% javascript %}
-        document.addEventListener("DOMContentLoaded", (event) => {
-          var thumbnails_wrapper = document.getElementById("js-product__thumbnails-wrapper");
-          var thumbnails = thumbnails_wrapper.getElementsByTagName("img")
-          thumbnails[0].classList.add('active');
-          var destination_container = document.getElementById("js-product__media-item");
-          var destination = destination_container.getElementsByClassName("product__media");
-
-          for (var i = 0; i < thumbnails.length; i++) {
-            var thumbnail = thumbnails[i];
-            thumbnail.addEventListener('click', function (e) {
-              var img = new Image();
-              img.src = e.target.src;
-              destination.innerHTML = '';
-              destination[0].appendChild(img);
-
-              resetThumbnails();
-              e.target.classList.add('active');
-            });
-          }
-
-          function resetThumbnails() {
-            for (var i = 0; i < thumbnails.length; i++) {
-              thumbnails[i].classList.remove('active');
-            }
-          }
-        });
-      {% endjavascript %}
+      
       <div class="product__info-wrapper grid__item">
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -421,7 +425,47 @@
   </div>
 </section>
 
+{% javascript %}
+  document.addEventListener("DOMContentLoaded", (event) => {
+    /*
+    product thumbnails
+    */
+    var thumbnails_wrapper = document.getElementById("js-product__thumbnails-wrapper");
+    var thumbnails = thumbnails_wrapper.getElementsByTagName("img")
+    thumbnails[0].classList.add('active');
+    var destination_container = document.getElementById("js-product__media-item");
+    var destination = destination_container.getElementsByClassName("product__media");
 
+    for (var i = 0; i < thumbnails.length; i++) {
+      var thumbnail = thumbnails[i];
+      thumbnail.addEventListener('click', function (e) {
+        var img = new Image();
+        img.src = e.target.src;
+        destination.innerHTML = '';
+        destination[0].appendChild(img);
+
+        resetThumbnails();
+        e.target.classList.add('active');
+      });
+    }
+
+    function resetThumbnails() {
+      for (var i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].classList.remove('active');
+      }
+    }
+    /*
+    END product thumbnails
+    */
+
+
+
+    
+
+
+
+  });
+{% endjavascript %}
 <script>
   // NOTE - if you want this code back, change the <script> to a liquid javascript tag
 // if (!customElements.get('product-modal')) {

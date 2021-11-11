@@ -41,12 +41,10 @@
                   </div>
                 {%- when 'link_list' -%}
                   {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                    <ul class="footer-block__details-content list-unstyled">
+                    <ul id="js-footer-nav" class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
-                        <li>
-                          <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
-                            {{ link.title }}
-                          </a>
+                        <li data-slug="{{ link.url | remove_first: "/" }}">
+                          {{ link.title }}
                         </li>
                       {%- endfor -%}
                     </ul>
@@ -363,6 +361,45 @@
   }
 
   customElements.define('localization-form', LocalizationForm);
+
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+  
+      /*
+      footer buttons / content modal
+      */
+      var content_modal = document.getElementById("js-content-modal");
+      var content_divs = document.getElementById("js-content-modal").getElementsByTagName("div");
+      var close_x_btn = document.getElementById("js-close-x-btn");
+      var footer_nav = document.getElementById("js-footer-nav");
+      var footer_nav_links = footer_nav.getElementsByTagName("li")
+      
+      console.log(footer_nav_links);
+      for (var i = 0; i < footer_nav_links.length; i++) {
+        var link = footer_nav_links[i];
+        link.addEventListener('click', function (e) {
+          content_modal.classList.add('visible');
+          var content_div = document.getElementById(e.target.dataset.slug);
+          resetContentModal();
+          content_div.classList.add('visible');
+        });
+      }
+
+      // close x button
+      close_x_btn.addEventListener('click', function () {
+        content_modal.classList.remove('visible');
+      });
+
+      function resetContentModal() {
+        for (var i = 0; i < content_divs.length; i++) {
+          content_divs[i].classList.remove('visible');
+        }
+      }
+      /*
+      END footer buttons / content modal
+      */
+
+  });
 {% endjavascript %}
 
 {% schema %}
