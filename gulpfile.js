@@ -1,7 +1,7 @@
 // INCLUDE GULP
 var gulp = require('gulp')
 var rename = require('gulp-rename')
-var sass = require('gulp-sass')
+var sass = require('gulp-sass')(require('sass'))
 var autoprefixer = require('gulp-autoprefixer')
 var sourcemaps = require('gulp-sourcemaps')
 var connect = require('gulp-connect')
