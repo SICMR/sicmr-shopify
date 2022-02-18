@@ -370,6 +370,9 @@ a {
     display: flex;
     flex-direction: column;
     margin-right: 7vw;
+    @include breakpoint(small) {
+      display: none;
+    }
 
     img {
       width: 100px;
@@ -404,6 +407,11 @@ a {
     width: auto;
     flex-grow: 0;
     margin-left: 7vw;
+    @include breakpoint(small) {
+      margin: 0;
+      padding: auto;
+      width: 100%;
+    }
   }
 
   .product__info-container {
