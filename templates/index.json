@@ -116,7 +116,7 @@
       ],
       "settings": {
         "product": "tear-your-eyes-out-tee-1",
-        "secondary_background": true,
+        "secondary_background": false,
         "hide_variants": false,
         "enable_video_looping": false
       }
