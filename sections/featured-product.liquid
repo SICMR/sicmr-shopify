@@ -15,10 +15,56 @@
   <link id="ModelViewerStyle" rel="stylesheet" href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css" media="print" onload="this.media='all'">
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
-
 <section class="{% if section.settings.secondary_background %}background-secondary{% else %}spaced-section{% endif %}">
   <div class="page-width">
-    <div class="featured-product product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
+    <div id="js-content-modal" class="content-modal">
+      <span id="js-close-x-btn">X</span>
+      <div id="description">
+        <div class="inner">
+          <div class="image">
+            <img src="{{ product | img_url: '1024x' }}" alt="">
+          </div>
+          <div class="copy">
+            {{ product.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="featured-product__title">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'title' -%}
+            {%- if product.title != blank -%}
+              {{ product.title | escape }}
+            {%- else -%}
+              {{ 'onboarding.product_title' | t }}
+            {%- endif -%}
+        {%- endcase -%}
+      {%- endfor -%}
+    </h2>
+    <div class="featured-product product grid grid--1-col {% if product.media.size > 0 %}grid--3-col-tablet{% else %}product--no-media{% endif %}">
+      <div id="js-product__thumbnails-wrapper" class="grid__item product__thumbnails-wrapper">
+        {%- liquid
+          if product.selected_or_first_available_variant.featured_media != null
+            assign media = product.selected_or_first_available_variant.featured_media
+            render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: section.settings.hide_variants
+          endif
+        -%}
+
+        {%- for media in product.media -%}
+          {%- liquid
+            if section.settings.hide_variants and media_to_render contains media.id
+              assign variant_image = true
+            else
+              assign variant_image = false
+            endif
+
+            unless media.id == product.selected_or_first_available_variant.featured_media.id
+              render 'product-media', media: media, loop: section.settings.enable_video_looping, variant_image: variant_image
+            endunless
+          -%}
+        {%- endfor -%}
+      </div>
       <div class="grid__item product__media-wrapper">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
@@ -26,7 +72,7 @@
         <div class="product__media-list">
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign media = product.selected_or_first_available_variant.featured_media -%}
-            <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
+            <div id="js-product__media-item" class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
               {% render 'product-thumbnail', media: media, position: 'featured', loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: false %}
             </div>
           {%- endif -%}
@@ -38,7 +84,7 @@
           -%}
           {%- for media in product.media -%}
             {%- if media_to_render contains media.id and media.id != product.selected_or_first_available_variant.featured_media.id -%}
-              <div class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
+              <div id="js-product__media-item" class="product__media-item" data-media-id="{{ section.id }}-{{ media.id }}">
                 {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: false %}
               </div>
             {%- endif -%}
@@ -59,6 +105,7 @@
           </button>
         {%- endif -%}
       </div>
+      
       <div class="product__info-wrapper grid__item">
         <div id="ProductInfo-{{ section.id }}" class="product__info-container">
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -66,21 +113,21 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
             {%- when 'text' -%}
-              <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
+              <!-- <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}" {{ block.shopify_attributes }}>
                 {{- block.settings.text -}}
-              </p>
+              </p> -->
             {%- when 'title' -%}
-              <h2 class="h1 product__title" {{ block.shopify_attributes }}>
+              <!-- <h2 class="h1 product__title" {{ block.shopify_attributes }}>
                 {%- if product.title != blank -%}
                   {{ product.title | escape }}
                 {%- else -%}
                   {{ 'onboarding.product_title' | t }}
                 {%- endif -%}
-              </h2>
+              </h2> -->
             {%- when 'price' -%}
-              <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+              <!-- <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-              </div>
+              </div> -->
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product__tax caption rte">
                   {%- if shop.taxes_included -%}
@@ -100,7 +147,7 @@
                 </div>
               {%- endif -%}
             {%- when 'quantity_selector' -%}
-              <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
+              <!-- <div class="product-form__input product-form__quantity" {{ block.shopify_attributes }}>
                 <label class="form__label" for="Quantity-{{ section.id }}">
                   {{ 'products.product.quantity.label' | t }}
                 </label>
@@ -122,9 +169,9 @@
                     {% render 'icon-plus' %}
                   </button>
                 </quantity-input>
-              </div>
+              </div> -->
             {%- when 'share' -%}
-              <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+              <!-- <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
               <share-button id="Share-{{ section.id }}" class="share-button" {{ block.shopify_attributes }}>
                 <button class="share-button__button hidden">
                   {% render 'icon-share' %}
@@ -159,14 +206,14 @@
                     </button>
                   </div>
                 </details>
-              </share-button>
+              </share-button> -->
             {%- when 'variant_picker' -%}
               {%- unless product.has_only_default_variant -%}
                 {%- if block.settings.picker_type == 'button' -%}
                   <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" data-update-url="false" {{ block.shopify_attributes }}>
                     {%- for option in product.options_with_values -%}
                         <fieldset class="js product-form__input">
-                          <legend class="form__label">{{ option.name }}</legend>
+                          <!-- <legend class="form__label">{{ option.name }}</legend> -->
                           {%- for value in option.values -%}
                             <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
                                   name="{{ option.name }}"
@@ -256,7 +303,7 @@
                         <button
                           type="submit"
                           name="add"
-                          class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                          class="product-form__submit button  {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                         {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                         >
                             <span>
@@ -273,7 +320,7 @@
                             </div>
                         </button>
                         {%- if block.settings.show_dynamic_checkout -%}
-                          {{ form | payment_button }}
+                          <!-- {{ form | payment_button }} -->
                         {%- endif -%}
                       </div>
                     {%- endform -%}
@@ -293,6 +340,7 @@
                   </div>
                 {%- endif -%}
               </div>
+              <div class="more-info link"><a href="/products/{{product.handle}}">More Info</a></div>
             {%- when 'custom_liquid' -%}
               {{ block.settings.custom_liquid }}
             {%- when 'rating' -%}
@@ -319,10 +367,10 @@
               {%- endif -%}
             {%- endcase -%}
           {%- endfor -%}
-        <a href="{{ product.url }}" class="link product__view-details animate-arrow">
+        <!-- <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
-        </a>
+        </a> -->
         </div>
       </div>
     </div>
@@ -359,41 +407,83 @@
 </section>
 
 {% javascript %}
-  if (!customElements.get('product-modal')) {
-    customElements.define('product-modal', class ProductModal extends ModalDialog {
-      constructor() {
-        super();
+  document.addEventListener("DOMContentLoaded", (event) => {
+    /*
+    product thumbnails
+    */
+    var thumbnails_wrapper = document.getElementById("js-product__thumbnails-wrapper");
+    var thumbnails = thumbnails_wrapper.getElementsByTagName("img")
+    thumbnails[0].classList.add('active');
+    var destination_container = document.getElementById("js-product__media-item");
+    var destination = destination_container.getElementsByClassName("product__media");
+
+    for (var i = 0; i < thumbnails.length; i++) {
+      var thumbnail = thumbnails[i];
+      thumbnail.addEventListener('click', function (e) {
+        var img = new Image();
+        img.src = e.target.src;
+        destination.innerHTML = '';
+        destination[0].appendChild(img);
+
+        resetThumbnails();
+        e.target.classList.add('active');
+      });
+    }
+
+    function resetThumbnails() {
+      for (var i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].classList.remove('active');
       }
+    }
+    /*
+    END product thumbnails
+    */
 
-      hide() {
-        super.hide();
-      }
 
-      show(opener) {
-        super.show(opener);
-        this.showActiveMedia();
-      }
 
-      showActiveMedia() {
-        this.querySelectorAll(`[data-media-id]:not([data-media-id="${this.openedBy.getAttribute("data-media-id")}"])`).forEach((element) => {
-            element.classList.remove('active');
-          }
-        )
-        const activeMedia = this.querySelector(`[data-media-id="${this.openedBy.getAttribute("data-media-id")}"]`);
-        const activeMediaTemplate = activeMedia.querySelector('template');
-        const activeMediaContent = activeMediaTemplate ? activeMediaTemplate.content : null;
-        activeMedia.classList.add('active');
-        activeMedia.scrollIntoView();
+    
 
-        const container = this.querySelector('[role="document"]');
-        container.scrollLeft = (activeMedia.width - container.clientWidth) / 2;
 
-        if (activeMedia.nodeName == 'DEFERRED-MEDIA' && activeMediaContent && activeMediaContent.querySelector('.js-youtube'))
-          activeMedia.loadContent();
-      }
-    });
-  }
+
+  });
 {% endjavascript %}
+<script>
+  // NOTE - if you want this code back, change the <script> to a liquid javascript tag
+// if (!customElements.get('product-modal')) {
+//     customElements.define('product-modal', class ProductModal extends ModalDialog {
+//       constructor() {
+//         super();
+//       }
+
+//       hide() {
+//         super.hide();
+//       }
+
+//       show(opener) {
+//         super.show(opener);
+//         this.showActiveMedia();
+//       }
+
+//       showActiveMedia() {
+//         this.querySelectorAll(`[data-media-id]:not([data-media-id="${this.openedBy.getAttribute("data-media-id")}"])`).forEach((element) => {
+//             element.classList.remove('active');
+//           }
+//         )
+//         const activeMedia = this.querySelector(`[data-media-id="${this.openedBy.getAttribute("data-media-id")}"]`);
+//         const activeMediaTemplate = activeMedia.querySelector('template');
+//         const activeMediaContent = activeMediaTemplate ? activeMediaTemplate.content : null;
+//         activeMedia.classList.add('active');
+//         activeMedia.scrollIntoView();
+
+//         const container = this.querySelector('[role="document"]');
+//         container.scrollLeft = (activeMedia.width - container.clientWidth) / 2;
+
+//         if (activeMedia.nodeName == 'DEFERRED-MEDIA' && activeMediaContent && activeMediaContent.querySelector('.js-youtube'))
+//           activeMedia.loadContent();
+//       }
+//     });
+//   } 
+</script>  
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- if first_3d_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
