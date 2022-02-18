@@ -25,9 +25,11 @@ a {
   color: #0000ff;
 }
 
-.page-width {
-  position: relative;
-  padding: 0 12rem;
+@media (min-width: 1023px) {
+  .page-width {
+    position: relative;
+    padding: 0 12rem;
+  }
 }
 
 #shopify-section-header .header-wrapper .header__heading-link .h2 {

@@ -1,3 +1,37 @@
+$xlarge: 1440px;
+$large: 1200px;
+$medium: 1024px;
+$small: 768px;
+$tiny: 480px;
+
+@mixin breakpoint($point) {
+  @if $point == xlarge {
+    @media (max-width: $xlarge - 1px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (max-width: $large - 1px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (max-width: $medium - 1px) {
+      @content;
+    }
+  } @else if $point == mediumup {
+    @media (min-width: $medium - 1px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (max-width: $small - 1px) {
+      @content;
+    }
+  } @else if $point == tiny {
+    @media (max-width: $tiny - 1px) {
+      @content;
+    }
+  }
+}
+
 $white: #ffffff;
 $black: #010101;
 $blue: #0000ff;
@@ -29,8 +63,10 @@ a {
   color: $blue;
 }
 .page-width {
-  position: relative;
-  padding: 0 12rem;
+  @include breakpoint(mediumup) {
+    position: relative;
+    padding: 0 12rem;
+  }
 }
 
 #shopify-section-header {
