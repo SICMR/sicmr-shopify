@@ -53,6 +53,74 @@
         "show_rating": false
       }
     },
+    "1645140550137faafc": {
+      "type": "featured-product",
+      "blocks": {
+        "16451405502734d92e-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}Test",
+            "text_style": "uppercase"
+          }
+        },
+        "16451405502734d92e-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "16451405502734d92e-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}Testttt",
+            "text_style": "subtitle"
+          }
+        },
+        "16451405502734d92e-3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "16451405502734d92e-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "16451405502734d92e-5": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "16451405502734d92e-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "16451405502734d92e-7": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "16451405502734d92e-0",
+        "16451405502734d92e-1",
+        "16451405502734d92e-2",
+        "16451405502734d92e-3",
+        "16451405502734d92e-4",
+        "16451405502734d92e-5",
+        "16451405502734d92e-6",
+        "16451405502734d92e-7"
+      ],
+      "settings": {
+        "product": "tear-your-eyes-out-tee-1",
+        "secondary_background": true,
+        "hide_variants": false,
+        "enable_video_looping": false
+      }
+    },
     "163615691241794176": {
       "type": "featured-product",
       "blocks": {
@@ -251,84 +319,16 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
-    },
-    "1645140550137faafc": {
-      "type": "featured-product",
-      "blocks": {
-        "16451405502734d92e-0": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "16451405502734d92e-1": {
-          "type": "title",
-          "settings": {
-          }
-        },
-        "16451405502734d92e-2": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
-        "16451405502734d92e-3": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "16451405502734d92e-4": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
-        "16451405502734d92e-5": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "16451405502734d92e-6": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true
-          }
-        },
-        "16451405502734d92e-7": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "16451405502734d92e-0",
-        "16451405502734d92e-1",
-        "16451405502734d92e-2",
-        "16451405502734d92e-3",
-        "16451405502734d92e-4",
-        "16451405502734d92e-5",
-        "16451405502734d92e-6",
-        "16451405502734d92e-7"
-      ],
-      "settings": {
-        "product": "tear-your-eyes-out-tee-1",
-        "secondary_background": false,
-        "hide_variants": false,
-        "enable_video_looping": false
-      }
     }
   },
   "order": [
     "rich_text",
     "featured_products",
+    "1645140550137faafc",
     "163615691241794176",
     "collage",
     "video",
     "image_banner",
-    "multi_column",
-    "1645140550137faafc"
+    "multi_column"
   ]
 }
