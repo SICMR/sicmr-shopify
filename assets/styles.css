@@ -261,6 +261,11 @@ a {
   flex-direction: column;
   margin-right: 7vw;
 }
+@media (max-width: 767px) {
+  .featured-product .product__thumbnails-wrapper {
+    display: none;
+  }
+}
 .featured-product .product__thumbnails-wrapper img {
   width: 100px;
   height: auto;
@@ -285,6 +290,13 @@ a {
   width: auto;
   flex-grow: 0;
   margin-left: 7vw;
+}
+@media (max-width: 767px) {
+  .featured-product .product__info-wrapper {
+    margin: 0;
+    padding: auto;
+    width: 100%;
+  }
 }
 .featured-product .product__info-container {
   display: flex;
