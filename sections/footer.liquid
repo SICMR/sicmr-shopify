@@ -41,10 +41,10 @@
                   </div>
                 {%- when 'link_list' -%}
                   {%- if block.settings.menu != blank and block.settings.heading != blank -%}
-                    <ul id="js-footer-nav" class="footer-block__details-content list-unstyled">
+                    <ul class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
                         <li data-slug="{{ link.url | remove_first: "/" }}">
-                          {{ link.title }}
+                          <a href="{{link.url }}">{{ link.title }}</a>
                         </li>
                       {%- endfor -%}
                     </ul>
@@ -367,7 +367,7 @@
   
       /*
       footer buttons / content modal
-      */
+      
       var content_modal = document.getElementById("js-content-modal");
       var content_divs = document.getElementById("js-content-modal").getElementsByTagName("div");
       var close_x_btn = document.getElementById("js-close-x-btn");
@@ -395,7 +395,7 @@
           content_divs[i].classList.remove('visible');
         }
       }
-      /*
+      
       END footer buttons / content modal
       */
 

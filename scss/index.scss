@@ -30,55 +30,55 @@ h6,
   padding: 0 12rem;
 }
 
-#shopify-section-announcement-bar {
-  display: none;
-}
+// #shopify-section-announcement-bar {
+//   display: none;
+// }
 
-#shopify-section-header {
-  padding-top: 100px;
+// #shopify-section-header {
+//   padding-top: 100px;
 
-  .header-wrapper {
-    border: none;
-    background: transparent;
+//   .header-wrapper {
+//     border: none;
+//     background: transparent;
 
-    .header {
-      &__heading {
-        display: none;
-      }
+//     .header {
+//       &__heading {
+//         display: none;
+//       }
 
-      &__heading-link {
-        .h2 {
-          display: block;
-          color: $blue;
-          font-size: 30px;
-          letter-spacing: 0.12em;
-          margin-bottom: 0.1em;
-        }
-      }
+//       &__heading-link {
+//         .h2 {
+//           display: block;
+//           color: $blue;
+//           font-size: 30px;
+//           letter-spacing: 0.12em;
+//           margin-bottom: 0.1em;
+//         }
+//       }
 
-      &__inline-menu {
-        display: none;
-      }
+//       &__inline-menu {
+//         display: none;
+//       }
 
-      &__search {
-        display: none;
-      }
+//       &__search {
+//         display: none;
+//       }
 
-      &__icon {
-        &--cart {
-          font-family: Arial, Helvetica, sans-serif;
-          font-weight: normal;
-          text-decoration: none;
-          border: 1px solid $black;
-          width: auto;
-          height: auto;
-          padding: 0 0.5em;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-}
+//       &__icon {
+//         &--cart {
+//           font-family: Arial, Helvetica, sans-serif;
+//           font-weight: normal;
+//           text-decoration: none;
+//           border: 1px solid $black;
+//           width: auto;
+//           height: auto;
+//           padding: 0 0.5em;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
+// }
 
 #shopify-section-footer {
   .footer {
@@ -129,6 +129,8 @@ h6,
     &__content-top {
       padding-top: 0;
       padding-bottom: 0;
+      display: flex;
+      justify-content: space-between;
     }
 
     &__content-bottom {

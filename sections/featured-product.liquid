@@ -19,52 +19,6 @@
   <div class="page-width">
     <div id="js-content-modal" class="content-modal">
       <span id="js-close-x-btn">X</span>
-      <div id="legal">
-        <ul>
-          <li><a href="/pages/privacy-policy">PRIVACY POLICY</a></li>
-          <li><a href="/pages/return-policy">RETURN POLICY</a></li>
-          <li><a href="/pages/terms-and-conditions-of-sale">TERMS AND CONDITIONS OF SALE</a></li>
-          <li><a href="/pages/terms-and-conditions-of-use">TERMS AND CONDITIONS OF USE</a></li>
-        </ul>
-      </div>
-      <div id="contact">
-        <div class="wrap">
-          <div class="inner">
-            <h3>Customer support: sales@</h3>
-            <form action="">
-              <div class="label">Name</div>
-              <div class="row row__split">
-                <div class="field-50">
-                  <input type="text" id="first-name">
-                  <div class="hint">First name</div>
-                </div>
-                <div class="field-50">
-                  <input type="text" id="last-name">
-                  <div class="hint">Last name</div>
-                </div>
-              </div>
-              <div class="row">
-                <label for="email">Email Address</label>
-                <input type="email" id="email">
-              </div>
-              <div class="row">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
-              </div>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div id="info-and-sizing">
-        <div class="inner">
-          <div class="copy">
-            <h3>INFO & SIZING</h3>
-            <p>Mattis enim ut tellus elementum sagittis vitae. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Duis ut diam quam nulla. Nibh venenatis cras sed felis eget velit aliquet sagittis. Arcu non odio euismod lacinia. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Ipsum nunc aliquet bibendum enim facilisis gravida.</p>
-            <p>Sed lectus vestibulum mattis ullamcorper velit sed. Nisi vitae suscipit tellus mauris a diam. Et netus et malesuada fames ac. Enim nunc faucibus a pellentesque sit amet. Dignissim convallis aenean et tortor. Ac tortor vitae purus faucibus ornare suspendisse sed nisi. Suspendisse faucibus interdum posuere lorem ipsum dolor. Faucibus nisl tincidunt eget nullam non nisi est sit. Sit amet volutpat consequat mauris nunc congue. </p>
-          </div>
-        </div>
-      </div>
       <div id="description">
         <div class="inner">
           <div class="image">
@@ -80,7 +34,6 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'title' -%}
-            <div>{{ shop.name }}</div>
             {%- if product.title != blank -%}
               {{ product.title | escape }}
             {%- else -%}
