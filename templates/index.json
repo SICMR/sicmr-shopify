@@ -2,7 +2,6 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
@@ -30,10 +29,10 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/cjto6aau39f81.png",
-        "image_height": "medium",
+        "image": "shopify:\/\/shop_images\/Screen_Shot_2022-05-04_at_1.45.44_PM.png",
+        "image_height": "small",
         "adapt_height_first_image": false,
-        "desktop_text_box_position": "flex-end",
+        "desktop_text_box_position": "flex-start",
         "show_text_box": true,
         "image_overlay_opacity": 0,
         "color_scheme": "background-1",
