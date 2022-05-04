@@ -35,11 +35,12 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo_width": 100,
+          "logo": "shopify:\/\/shop_images\/sicmr_original.png",
+          "logo_width": 190,
           "logo_position": "middle-left",
           "menu": "",
           "show_line_separator": false,
-          "enable_sticky_header": true,
+          "enable_sticky_header": false,
           "margin_bottom": 0
         }
       },
