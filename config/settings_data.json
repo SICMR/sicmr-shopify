@@ -60,14 +60,14 @@
             "type": "link_list",
             "settings": {
               "heading": "Listen",
-              "menu": "footer"
+              "menu": "listen"
             }
           },
           "4b2beff2-e2bd-46cf-8000-03c912c487b3": {
             "type": "link_list",
             "settings": {
               "heading": "Follow",
-              "menu": "footer"
+              "menu": "follow"
             }
           }
         },
