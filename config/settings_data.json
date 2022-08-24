@@ -79,7 +79,7 @@
         "settings": {
           "color_scheme": "background-1",
           "newsletter_enable": true,
-          "newsletter_heading": "SUBSCRIBE",
+          "newsletter_heading": "SUBSCRIBE for news & updates!",
           "show_social": false,
           "enable_country_selector": false,
           "enable_language_selector": false,
