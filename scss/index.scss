@@ -78,6 +78,25 @@ a {
       display: flex;
       justify-content: space-between;
 
+      &__icon  {
+        .icon {
+          fill: black;
+        }
+        
+        .icon-hamburger {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+
+      &__heading {
+        @include breakpoint(small) {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
       &__heading-link {
         .h2 {
           display: block;
@@ -85,6 +104,12 @@ a {
           font-size: 30px;
           letter-spacing: 0.12em;
           margin-bottom: 0.1em;
+        }
+
+        img {
+          @include breakpoint(small) {
+            width: 100px;
+          }
         }
       }
 
@@ -111,9 +136,44 @@ a {
         letter-spacing: 0.25em;
         cursor: pointer;
 
+        @include breakpoint(small) {
+          font-size: 10px;
+        }
+
         .icon {
           display: none;
         }
+      }
+    }
+
+    .menu-drawer {
+      width: 100%;
+
+      &__navigation {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+          li {
+            a {
+              text-transform: uppercase;
+              font-size: 20px;
+              letter-spacing: 0.25em;
+            }
+          }
+        }
+
+        > a {
+          position: absolute;
+          bottom: 30px;
+          font-size: 14px;
+        }
+      }
+
+      &__utility-links {
+        display: none;
       }
     }
   }
@@ -167,7 +227,15 @@ a {
           .footer-block__newsletter {
             text-align: right;
 
+            @include breakpoint(small) {
+              text-align: left;
+            }
+
             .newsletter-form {
+              @include breakpoint(small) {
+                align-items: flex-start;
+              }
+
               .field {
 
                 &__input {
@@ -229,6 +297,11 @@ a {
       padding-bottom: 0;
       display: flex;
       justify-content: space-between;
+
+      @include breakpoint(small) {
+        flex-direction: column;
+        padding: 0 1.5rem;
+      }
     }
 
     &__content-bottom {

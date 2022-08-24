@@ -36,12 +36,31 @@ a {
   display: flex;
   justify-content: space-between;
 }
+#shopify-section-header .header-wrapper .header__icon .icon {
+  fill: black;
+}
+#shopify-section-header .header-wrapper .header__icon .icon-hamburger {
+  width: 3rem;
+  height: 3rem;
+}
+@media (max-width: 767px) {
+  #shopify-section-header .header-wrapper .header__heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 #shopify-section-header .header-wrapper .header__heading-link .h2 {
   display: block;
   color: #0000ff;
   font-size: 30px;
   letter-spacing: 0.12em;
   margin-bottom: 0.1em;
+}
+@media (max-width: 767px) {
+  #shopify-section-header .header-wrapper .header__heading-link img {
+    width: 100px;
+  }
 }
 #shopify-section-header .header-wrapper .header__inline-menu .list-menu li a {
   text-transform: uppercase;
@@ -58,7 +77,34 @@ a {
   letter-spacing: 0.25em;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  #shopify-section-header .header-wrapper .header #cart-icon-bubble {
+    font-size: 10px;
+  }
+}
 #shopify-section-header .header-wrapper .header #cart-icon-bubble .icon {
+  display: none;
+}
+#shopify-section-header .header-wrapper .menu-drawer {
+  width: 100%;
+}
+#shopify-section-header .header-wrapper .menu-drawer__navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#shopify-section-header .header-wrapper .menu-drawer__navigation ul li a {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.25em;
+}
+#shopify-section-header .header-wrapper .menu-drawer__navigation > a {
+  position: absolute;
+  bottom: 30px;
+  font-size: 14px;
+}
+#shopify-section-header .header-wrapper .menu-drawer__utility-links {
   display: none;
 }
 
@@ -100,6 +146,16 @@ a {
 }
 #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter {
   text-align: right;
+}
+@media (max-width: 767px) {
+  #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter {
+    text-align: left;
+  }
+}
+@media (max-width: 767px) {
+  #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter .newsletter-form {
+    align-items: flex-start;
+  }
 }
 #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter .newsletter-form .field__input {
   width: auto;
@@ -143,6 +199,12 @@ a {
   padding-bottom: 0;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 767px) {
+  #shopify-section-footer .footer__content-top {
+    flex-direction: column;
+    padding: 0 1.5rem;
+  }
 }
 #shopify-section-footer .footer__content-bottom {
   padding-top: 0;
