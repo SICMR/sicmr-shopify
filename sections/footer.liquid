@@ -106,7 +106,7 @@
                     {{ 'newsletter.label' | t }}
                   </label>
                   <button type="submit" class="newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
-                    {% render 'icon-arrow' %}
+                    Sign Up
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -117,6 +117,7 @@
                 <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
               {%- endif -%}
             {%- endform -%}
+            <a href="https://www.marsargo.com/" target="_blank">> Back to Mars Argo</a>
           </div>
         {%- endif -%}
 
