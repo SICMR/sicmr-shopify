@@ -483,3 +483,21 @@ a {
   max-width: 600px;
   height: auto;
 }
+
+.product .caption-with-letter-spacing {
+  display: none;
+}
+.product__title {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+.product__description {
+  font-size: 14px;
+  font-weight: normal;
+}
+.product .product-form__input label {
+  font-size: 10px !important;
+  padding: 5px !important;
+  border-radius: 0 !important;
+}

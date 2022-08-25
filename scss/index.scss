@@ -651,3 +651,28 @@ a {
     }
   }
 }
+
+.product {
+  .caption-with-letter-spacing {
+    display: none;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .product-form__input {
+    label {
+      font-size: 10px !important;
+      padding: 5px !important;
+      border-radius: 0 !important;
+    }
+  }
+}
