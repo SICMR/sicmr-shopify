@@ -79,6 +79,12 @@
         "full_width": true
       }
     },
+    "product_slideshow": {
+      "type": "product-slideshow",
+      "settings": {
+        "collection": "all"
+      }
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -373,6 +379,7 @@
   "order": [
     "image_banner",
     "rich_text",
+    "product_slideshow",
     "featured_products",
     "collage",
     "1645140550137faafc",

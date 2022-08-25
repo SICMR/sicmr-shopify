@@ -615,3 +615,39 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
+
+.product-grid {
+
+  .grid__item {
+    @include breakpoint(small) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .card-information {
+    text-align: center;
+
+    .price {
+      justify-content: center;
+    }
+  }
+}
+
+.product-slideshow {
+  outline-offset: 0;
+  box-shadow: none;
+
+  &__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+  }
+}

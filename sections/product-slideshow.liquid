@@ -1,0 +1,45 @@
+<div class="product-slideshow" data-flickity='{ "cellAlign": "center", "contain": true, "wrapAround": true, "prevNextButtons": false, "pageDots": false{% if section.settings.autoplay %}, "autoPlay": {{section.settings.autoplay_speed}}000{% endif %}}'>
+  {%- for product in section.settings.collection.products -%}
+    <div class="product-slideshow__item">
+      <a href="{{product.url}}">
+        <img src="{{product.featured_image | image_url}}" alt="">
+      </a>
+    </div>
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Product Slideshow",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Choose Collection"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "sec",
+      "label": "Autoplay Speed",
+      "default": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Slideshow"
+    }
+  ]
+}
+{% endschema %}

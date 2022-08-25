@@ -454,3 +454,32 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
+
+@media (max-width: 767px) {
+  .product-grid .grid__item {
+    width: 100%;
+    max-width: none;
+  }
+}
+.product-grid .card-information {
+  text-align: center;
+}
+.product-grid .card-information .price {
+  justify-content: center;
+}
+
+.product-slideshow {
+  outline-offset: 0;
+  box-shadow: none;
+}
+.product-slideshow__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.product-slideshow__item img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
