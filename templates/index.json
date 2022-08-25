@@ -82,11 +82,14 @@
     "product_slideshow": {
       "type": "product-slideshow",
       "settings": {
-        "collection": "all"
+        "collection": "all",
+        "autoplay": true,
+        "autoplay_speed": 5
       }
     },
     "featured_products": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Mars Argo \"Angry\" Merch",
         "collection": "all",
