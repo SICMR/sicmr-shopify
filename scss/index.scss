@@ -205,8 +205,8 @@ a {
           li {
             font-size: 14px;
             color: black;
-            text-transform: uppercase;
-            letter-spacing: 0.25em;
+            // text-transform: uppercase;
+            // letter-spacing: 0.25em;
             cursor: pointer;
 
             a {
@@ -639,9 +639,16 @@ a {
   box-shadow: none;
 
   &__item {
+    position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
+    opacity: 0;
+    transition: 0.25s opacity;
+
+    &.is-selected {
+      opacity: 1;
+    }
 
     img {
       display: block;

@@ -129,8 +129,6 @@ a {
 #shopify-section-footer .footer .footer-block__details-content li {
   font-size: 14px;
   color: black;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
   cursor: pointer;
 }
 #shopify-section-footer .footer .footer-block__details-content li a {
@@ -473,9 +471,15 @@ a {
   box-shadow: none;
 }
 .product-slideshow__item {
+  position: absolute;
   width: 100%;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transition: 0.25s opacity;
+}
+.product-slideshow__item.is-selected {
+  opacity: 1;
 }
 .product-slideshow__item img {
   display: block;
