@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "title": {
+      "type": "text",
+      "disabled": false,
+      "settings": {
+        "text": "FAQs:"
+      }
+    },
+  },
+  "order": [
+    "title"
+  ]
+}
