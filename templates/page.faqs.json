@@ -1,14 +1,13 @@
 {
   "sections": {
-    "title": {
-      "type": "text",
-      "disabled": false,
+    "faqs": {
+      "type": "faqs",
       "settings": {
-        "text": "FAQs:"
+        "heading": "FAQs"
       }
-    },
+    }
   },
   "order": [
-    "title"
+    "faqs"
   ]
 }

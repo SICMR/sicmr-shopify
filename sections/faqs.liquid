@@ -1,0 +1,24 @@
+<div class="faqs page-width spaced-section">
+  <h2 class="title">{{ section.settings.heading | escape }}</h2>
+</div>
+
+{% schema %}
+{
+  "name": "FAQs",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "FAQs",
+      "label": "Heading"
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs"
+    }
+  ]
+}
+{% endschema %}
