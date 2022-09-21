@@ -1,6 +1,38 @@
 <div class="faqs page-width spaced-section">
   <h2 class="title">{{ section.settings.heading | escape }}</h2>
+
+  <ul class="faq-items">
+    {%- for block in section.blocks -%}
+    <li class="faq-item {% if forloop.index0 == 0 %}active{% endif %}">
+      <div class="question" data-index="{{forloop.index0}}">{{ block.settings.question }}</div>
+      <div class="answer">{{ block.settings.answer }}</div>
+    </li>
+    {%- endfor -%}
+  </ul>
 </div>
+
+{% javascript %}
+  document.addEventListener("DOMContentLoaded", (event) => {
+
+      var faq_items = document.getElementsByClassName('faq-item');
+      
+      for (var i = 0; i < faq_items.length; i++) {
+        var faq_item = faq_items[i];
+        var question = faq_items[i].getElementsByClassName('question')[0];
+        
+        question.addEventListener('click', function (e) {
+          //console.log(this.dataset.index);
+
+          for (var j = 0; j < faq_items.length; j++) {
+            faq_items[j].classList.remove('active');
+          }
+
+          faq_items[this.dataset.index].classList.add('active');
+        });
+      }
+      
+  });
+{% endjavascript %}
 
 {% schema %}
 {

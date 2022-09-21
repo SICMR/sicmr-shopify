@@ -561,11 +561,52 @@ input, textarea, keygen, select, button {
 }
 
 .faqs {
-  max-width: 1040px;
+  max-width: 1300px;
 }
 .faqs .title {
   font-weight: bold;
   font-size: 14px;
   color: #010101;
   letter-spacing: 0.1em;
+}
+.faqs .faq-items {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.faqs .faq-items li {
+  margin-bottom: 20px;
+}
+.faqs .faq-items li.active .question {
+  color: #0000ff;
+}
+.faqs .faq-items li.active .answer {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+.faqs .faq-items li .question {
+  width: 45%;
+  cursor: pointer;
+}
+.faqs .faq-items li .question:hover {
+  color: #0000ff;
+}
+.faqs .faq-items li .answer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s opacity;
+}
+.faqs .faq-items li .answer p {
+  margin-top: 0;
+}
+.faqs .faq-items li .answer p:first-of-type:before {
+  content: ">";
+  margin-right: 0.5em;
 }
