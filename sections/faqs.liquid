@@ -15,7 +15,7 @@
   ],
   "blocks": [
     {
-      "type": "faq_item",
+      "type": "column",
       "name": "FAQ Item",
       "settings": [
         {
@@ -25,20 +25,18 @@
           "label": "Question"
         },
         {
-          "type": "text",
+          "type": "richtext",
           "id": "answer",
-          "default": "Answer...",
+          "default": "<p>Answer...</p>",
           "label": "Answer"
         }
       ]
     }
   ],
-  "default": {
-    "blocks": [
-      {
-        "type": "faq_item"
-      }
-    ]
-  }
+  "presets": [
+    {
+      "name": "FAQs"
+    }
+  ]
 }
 {% endschema %}
