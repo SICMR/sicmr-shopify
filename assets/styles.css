@@ -25,6 +25,10 @@ a {
   color: #0000ff;
 }
 
+input, textarea, keygen, select, button {
+  font-family: "Courier New Bold", Courier, monospace !important;
+}
+
 @media (min-width: 1023px) {
   .page-width {
     position: relative;
