@@ -123,7 +123,7 @@ input, textarea, keygen, select, button {
   font-size: 14px;
   color: black;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.1em;
 }
 #shopify-section-footer .footer .footer-block__details-content {
   display: flex;
@@ -133,7 +133,12 @@ input, textarea, keygen, select, button {
 #shopify-section-footer .footer .footer-block__details-content li {
   font-size: 14px;
   color: black;
+  letter-spacing: 0;
   cursor: pointer;
+}
+#shopify-section-footer .footer .footer-block__details-content li.footer-page-link.highlighted a {
+  color: #0000ff;
+  font-weight: bold;
 }
 #shopify-section-footer .footer .footer-block__details-content li a {
   color: black;
@@ -509,4 +514,48 @@ input, textarea, keygen, select, button {
   font-size: 10px !important;
   padding: 5px !important;
   border-radius: 0 !important;
+}
+
+.contact {
+  max-width: 1040px;
+}
+.contact .title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #010101;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.contact .contact-form .field {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-form .field input, .contact .contact-form .field textarea {
+  order: 2;
+  border-radius: 3px;
+  border-width: 1px;
+  background-color: #FAFAFA;
+  padding: 1.5rem;
+}
+.contact .contact-form .field label {
+  position: unset;
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+.contact .contact-form .field label.invisible {
+  visibility: hidden;
+}
+.contact .contact-form .field .secondary-label {
+  order: 3;
+  font-weight: bold;
+  font-size: 16px;
+  color: #4D4D4D;
+  letter-spacing: 0.1em;
+  margin-top: 0.25em;
+}
+.contact .contact-form .contact__button .button {
+  padding: 0.75em 1.5em;
+  min-width: 0;
+  font-size: 14px;
+  min-height: 0;
 }

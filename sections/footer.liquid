@@ -43,7 +43,7 @@
                   {%- if block.settings.menu != blank and block.settings.heading != blank -%}
                     <ul class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
-                        <li data-slug="{{ link.url | remove_first: "/" }}">
+                        <li class="footer-page-link" data-slug="{{ link.url }}">
                           <a href="{{link.url }}">{{ link.title }}</a>
                         </li>
                       {%- endfor -%}
@@ -398,6 +398,26 @@
       }
       
       END footer buttons / content modal
+      */
+
+      /*
+      START Highlighted Footer buttons
+      */
+      var footer_page_links = document.getElementsByClassName('footer-page-link');
+      var current_page_url = window.location.pathname;
+      //console.log(footer_page_links);
+      //console.log(current_page_url);
+      for (var i = 0; i < footer_page_links.length; i++) {
+        var el = footer_page_links[i];
+        //console.log(el.dataset.slug);
+        var link_slug = el.dataset.slug;
+        if (link_slug == current_page_url) {
+          el.classList.add('highlighted');
+        }
+        
+      }
+      /*
+      END Highlighted Footer buttons
       */
 
   });
