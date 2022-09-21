@@ -23,12 +23,36 @@
             "question": "How do I know what size is best for me?",
             "answer": "<p>Tortor vitae purus faucibus ornare suspendisse sed. Sed faucibus turpis in eu mi bibendum neque egestas. Donec enim diam vulputate ut pharetra sit amet aliquam.<\/p>"
           }
+        },
+        "c750ff48-8c02-476e-8ff4-6c295167e927": {
+          "type": "column",
+          "settings": {
+            "question": "What if my package has not arrived but the tracking says that it has been delivered?",
+            "answer": "<p>Tortor vitae purus faucibus ornare suspendisse sed. Sed faucibus turpis in eu mi bibendum neque egestas. Donec enim diam vulputate ut pharetra sit amet aliquam.<\/p>"
+          }
+        },
+        "f059efce-5920-42cc-adc3-66f7dd4658fa": {
+          "type": "column",
+          "settings": {
+            "question": "Can I update my shipping address after my order has been placed?",
+            "answer": "<p>Tortor vitae purus faucibus ornare suspendisse sed. Sed faucibus turpis in eu mi bibendum neque egestas. Donec enim diam vulputate ut pharetra sit amet aliquam.Tortor vitae purus faucibus ornare suspendisse sed. Sed faucibus turpis in eu mi bibendum neque egestas. Donec enim diam vulputate ut pharetra sit amet aliquam.<\/p>"
+          }
+        },
+        "538bd977-8710-4ae5-a8b5-caa50ae15c85": {
+          "type": "column",
+          "settings": {
+            "question": "How do I wash my items?",
+            "answer": "<p>Tortor vitae purus faucibus ornare suspendisse sed. <\/p>"
+          }
         }
       },
       "block_order": [
         "088c8784-3560-446c-a413-538ad8852967",
         "c8c40df3-ea37-458c-910d-df30a8ad625d",
-        "31fcb632-3bff-4227-b9f5-abb217ee110f"
+        "31fcb632-3bff-4227-b9f5-abb217ee110f",
+        "c750ff48-8c02-476e-8ff4-6c295167e927",
+        "f059efce-5920-42cc-adc3-66f7dd4658fa",
+        "538bd977-8710-4ae5-a8b5-caa50ae15c85"
       ],
       "settings": {
         "heading": "FAQs:"
