@@ -9,10 +9,26 @@
             "question": "How long will it take for my order to arrive?",
             "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....<\/p>"
           }
+        },
+        "c8c40df3-ea37-458c-910d-df30a8ad625d": {
+          "type": "column",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Answer...A erat nam at lectus urna duis convallis.<\/p>"
+          }
+        },
+        "31fcb632-3bff-4227-b9f5-abb217ee110f": {
+          "type": "column",
+          "settings": {
+            "question": "How do I know what size is best for me?",
+            "answer": "<p>Tortor vitae purus faucibus ornare suspendisse sed. Sed faucibus turpis in eu mi bibendum neque egestas. Donec enim diam vulputate ut pharetra sit amet aliquam.<\/p>"
+          }
         }
       },
       "block_order": [
-        "088c8784-3560-446c-a413-538ad8852967"
+        "088c8784-3560-446c-a413-538ad8852967",
+        "c8c40df3-ea37-458c-910d-df30a8ad625d",
+        "31fcb632-3bff-4227-b9f5-abb217ee110f"
       ],
       "settings": {
         "heading": "FAQs:"
