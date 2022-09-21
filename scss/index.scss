@@ -749,3 +749,14 @@ input, textarea, keygen, select, button {
     }
   }
 }
+
+.faqs {
+  max-width: 1040px;
+
+  .title {
+    font-weight: bold;
+    font-size: 14px;
+    color: $black;
+    letter-spacing: 0.1em;
+  }
+}

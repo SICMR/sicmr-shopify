@@ -5,8 +5,6 @@
 {% schema %}
 {
   "name": "FAQs",
-  "tag": "section",
-  "class": "spaced-section",
   "settings": [
     {
       "type": "text",
@@ -15,10 +13,32 @@
       "label": "Heading"
     }
   ],
-  "presets": [
+  "blocks": [
     {
-      "name": "FAQs"
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "default": "Question...",
+          "label": "Question"
+        },
+        {
+          "type": "text",
+          "id": "answer",
+          "default": "Answer...",
+          "label": "Answer"
+        }
+      ]
     }
-  ]
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "faq_item"
+      }
+    ]
+  }
 }
 {% endschema %}

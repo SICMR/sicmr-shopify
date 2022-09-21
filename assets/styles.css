@@ -559,3 +559,13 @@ input, textarea, keygen, select, button {
   font-size: 14px;
   min-height: 0;
 }
+
+.faqs {
+  max-width: 1040px;
+}
+.faqs .title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #010101;
+  letter-spacing: 0.1em;
+}
