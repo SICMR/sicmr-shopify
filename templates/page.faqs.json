@@ -2,6 +2,18 @@
   "sections": {
     "faqs": {
       "type": "faqs",
+      "blocks": {
+        "088c8784-3560-446c-a413-538ad8852967": {
+          "type": "column",
+          "settings": {
+            "question": "How long will it take for my order to arrive?",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua....<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "088c8784-3560-446c-a413-538ad8852967"
+      ],
       "settings": {
         "heading": "FAQs:"
       }
