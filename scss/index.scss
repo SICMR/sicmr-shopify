@@ -56,11 +56,13 @@ h6,
 .h5,
 .h6 {
   font-family: 'Courier New Bold', Courier, monospace;
-  color: $blue;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 a {
-  color: $blue;
+  
 }
 
 input, textarea, keygen, select, button {
@@ -251,10 +253,12 @@ input, textarea, keygen, select, button {
                 &__input {
                   width: auto;
                   margin-right: 20px;
+                  padding: 0;
+                  padding-left: 1em;
                 }
 
                 &__label {
-
+                  
                 }
 
                 &__button {
@@ -271,7 +275,7 @@ input, textarea, keygen, select, button {
                   appearance: none;
                   border: none;
                   white-space: nowrap;
-                  padding: 0 2em;
+                  padding: 0 1.5em;
                 }
               }
               
@@ -322,9 +326,11 @@ input, textarea, keygen, select, button {
 
     &__copyright {
       &.caption {
-        font-size: 14px;
+        font-size: 12px;
         text-transform: uppercase;
+        font-weight: bold;
         letter-spacing: 0.25em;
+        color: black;
         margin-top: 4em;
       }
     }
@@ -616,15 +622,33 @@ input, textarea, keygen, select, button {
   }
 }
 
-.main-page-title {
-  font-family: Arial, Helvetica, sans-serif;
-  color: $black;
-  font-size: 40px;
+.main-page {
+  max-width: 870px;
+  
+  .main-page-title {
+    color: $black;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: bold;
+  }
 }
 
 .rte {
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
+
+  a {
+    text-decoration: none;
+    color: black !important;
+
+    &:hover {
+      color: $blue !important;
+    }
+  }
 }
 
 .product-grid {
@@ -723,6 +747,7 @@ input, textarea, keygen, select, button {
         position: unset;
         font-size: 14px;
         margin-bottom: 0.5em;
+        letter-spacing: 0.1rem !important;
 
         &.invisible {
           visibility: hidden;
@@ -775,7 +800,7 @@ input, textarea, keygen, select, button {
         .question {
           color: $blue;
         }
-        
+
         .answer {
           opacity: 1;
           transition-delay: 0.25s;
@@ -797,6 +822,7 @@ input, textarea, keygen, select, button {
         right: 0;
         width: 45%;
         opacity: 0;
+        text-transform: none;
         pointer-events: none;
         transition: 0.25s opacity;
   
