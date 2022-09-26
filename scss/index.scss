@@ -37,7 +37,7 @@ $black: #010101;
 $blue: #0000ff;
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  // font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   font-size: 19px;
   color: $black;
@@ -55,7 +55,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Courier New Bold', Courier, monospace;
+  // font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
@@ -66,7 +66,7 @@ a {
 }
 
 input, textarea, keygen, select, button {
-  font-family: 'Courier New Bold', Courier, monospace !important;
+  // font-family: 'Courier New', Courier, monospace !important;
 }
 .page-width {
   @include breakpoint(mediumup) {
@@ -264,7 +264,7 @@ input, textarea, keygen, select, button {
                 &__button {
                   flex-shrink: 0;
                   position: relative;
-                  font-family: 'Courier New', Courier, monospace;
+                  // font-family: 'Courier New', Courier, monospace;
                   font-weight: bold;
                   text-transform: uppercase;
                   letter-spacing: 0.25em;
@@ -394,7 +394,7 @@ input, textarea, keygen, select, button {
         margin-bottom: 1em;
         a {
           text-decoration: none;
-          font-family: Arial, Helvetica, sans-serif;
+          // font-family: Arial, Helvetica, sans-serif;
           color: $black;
           font-weight: normal;
         }
@@ -450,10 +450,10 @@ input, textarea, keygen, select, button {
     .inner {
       width: 100%;
       max-width: 715px;
-      font-family: Arial, Helvetica, sans-serif;
+      // font-family: Arial, Helvetica, sans-serif;
 
       h3 {
-        font-family: Arial, Helvetica, sans-serif;
+        // font-family: Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 20px;
@@ -588,7 +588,7 @@ input, textarea, keygen, select, button {
     flex-direction: column;
 
     input[type='radio'] + label {
-      font-family: Arial, Helvetica, sans-serif;
+      // font-family: Arial, Helvetica, sans-serif;
       font-weight: normal;
       font-size: 25px;
       border-radius: 0;

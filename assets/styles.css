@@ -1,5 +1,4 @@
 body {
-  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: 19px;
   color: #010101;
@@ -17,14 +16,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Courier New Bold", Courier, monospace;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-input, textarea, keygen, select, button {
-  font-family: "Courier New Bold", Courier, monospace !important;
 }
 
 @media (min-width: 1023px) {
@@ -171,7 +165,6 @@ input, textarea, keygen, select, button {
 #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter .newsletter-form .field__button {
   flex-shrink: 0;
   position: relative;
-  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -278,7 +271,6 @@ input, textarea, keygen, select, button {
 }
 .content-modal #legal ul li a {
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
   color: #010101;
   font-weight: normal;
 }
@@ -319,10 +311,8 @@ input, textarea, keygen, select, button {
 .content-modal #contact .inner {
   width: 100%;
   max-width: 715px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .content-modal #contact .inner h3 {
-  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
@@ -437,7 +427,6 @@ input, textarea, keygen, select, button {
   flex-direction: column;
 }
 .featured-product .product-form__input input[type=radio] + label {
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-size: 25px;
   border-radius: 0;
