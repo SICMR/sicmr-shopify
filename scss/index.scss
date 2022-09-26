@@ -286,6 +286,7 @@ input, textarea, keygen, select, button {
               margin-top: 2em;
               font-size: 14px;
               text-decoration: none;
+              color: black;
 
               &:hover {
                 text-decoration: underline;
@@ -840,4 +841,8 @@ input, textarea, keygen, select, button {
     }
 
   }
+}
+
+input {
+  font-family: var(--font-body-family);
 }

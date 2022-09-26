@@ -184,6 +184,7 @@ h6,
   margin-top: 2em;
   font-size: 14px;
   text-decoration: none;
+  color: black;
 }
 #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter a:hover {
   text-decoration: underline;
@@ -616,4 +617,8 @@ h6,
 .faqs .faq-items li .answer p:first-of-type:before {
   content: ">";
   margin-right: 0.5em;
+}
+
+input {
+  font-family: var(--font-body-family);
 }
