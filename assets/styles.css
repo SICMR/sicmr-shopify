@@ -73,6 +73,9 @@ h6,
   letter-spacing: 0.25em;
   cursor: pointer;
 }
+#shopify-section-header .header-wrapper .header #cart-icon-bubble:hover {
+  text-decoration: underline;
+}
 @media (max-width: 767px) {
   #shopify-section-header .header-wrapper .header #cart-icon-bubble {
     font-size: 10px;
@@ -224,6 +227,11 @@ h6,
   padding-top: 0;
   border: none;
 }
+@media (max-width: 767px) {
+  #shopify-section-footer .footer__column--info {
+    padding: 0;
+  }
+}
 #shopify-section-footer .footer__copyright.caption {
   font-size: 12px;
   text-transform: uppercase;
@@ -231,6 +239,11 @@ h6,
   letter-spacing: 0.25em;
   color: black;
   margin-top: 4em;
+}
+@media (max-width: 767px) {
+  #shopify-section-footer .footer__copyright.caption {
+    font-size: 9px;
+  }
 }
 
 .content-modal {
@@ -531,10 +544,20 @@ h6,
 .product__title {
   font-size: 14px;
   color: black;
-  font-weight: bold;
+  font-weight: normal;
+  text-transform: none;
+}
+.product .price {
+  font-weight: normal;
 }
 .product__description {
   font-size: 14px;
+  font-weight: normal;
+}
+.product .product-form__buttons {
+  max-width: 25rem;
+}
+.product .share-button__button {
   font-weight: normal;
 }
 .product .product-form__input label {
@@ -542,7 +565,9 @@ h6,
   padding: 5px !important;
   border-radius: 0 !important;
 }
-
+.product .product__modal-opener {
+  border: none !important;
+}
 .contact {
   max-width: 1040px;
   padding-top: 1px;
@@ -648,4 +673,17 @@ h6,
 
 input, button, select, textarea {
   font-family: var(--font-body-family);
+}
+
+.title-wrapper-with-link {
+  font-size: 1.4rem;
+}
+
+cart-items {
+  padding-top: 40px !important;
+}
+
+.cart-item__details a, .cart-item__details .product-option {
+  text-transform: none;
+  font-weight: normal;
 }

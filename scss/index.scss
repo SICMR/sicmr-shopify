@@ -142,6 +142,10 @@ input, textarea, keygen, select, button {
         letter-spacing: 0.25em;
         cursor: pointer;
 
+        &:hover {
+          text-decoration: underline;
+        }
+
         @include breakpoint(small) {
           font-size: 10px;
         }
@@ -190,121 +194,121 @@ input, textarea, keygen, select, button {
     border: none;
     margin-top: 100px;
 
-      &__blocks-wrapper {
-        flex-grow: 1;
-      }
+    &__blocks-wrapper {
+      flex-grow: 1;
+    }
     
-      .footer-block {
-      
-        &__heading {
-          font-weight: bold;
+    .footer-block {
+    
+      &__heading {
+        font-weight: bold;
+        font-size: 14px;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;      
+      }
+
+      &__details-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        li {
           font-size: 14px;
           color: black;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;      
-        }
+          letter-spacing: 0;
+          cursor: pointer;
 
-        &__details-content {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-
-          li {
-            font-size: 14px;
-            color: black;
-            letter-spacing: 0;
-            cursor: pointer;
-
-            &.footer-page-link.highlighted {
-              a {
-                color: $blue;
-                font-weight: bold;
-              }
-            }
-
+          &.footer-page-link.highlighted {
             a {
-              color: black;
-              font-weight: normal;
-              
-              &:hover {
-                color: $blue;
-              }
+              color: $blue;
+              font-weight: bold;
             }
           }
-        }
 
-        &--newsletter {
-          margin-top: 0;
-          align-items: flex-start;
-
-          .footer-block__newsletter {
-            text-align: right;
-
-            @include breakpoint(small) {
-              text-align: left;
-            }
-
-            .newsletter-form {
-              @include breakpoint(small) {
-                align-items: flex-start;
-              }
-
-              .field {
-
-                &__input {
-                  width: auto;
-                  margin-right: 20px;
-                  padding: 0;
-                  padding-left: 1em;
-                  border-width: 1px;
-                  border-color: #a3a3a3;
-                  background-color: #FAFAFA;
-                  box-shadow: none;
-
-                  &:hover {
-                    border-color: #000;
-                  }
-                }
-
-                &__label {
-                  font-weight: normal;
-                }
-
-                &__button {
-                  flex-shrink: 0;
-                  position: relative;
-                  // font-family: 'Courier New', Courier, monospace;
-                  font-weight: bold;
-                  font-size: 13px;
-                  text-transform: uppercase;
-                  letter-spacing: 0.25em;
-                  background-color: black;
-                  color: white;
-                  width: auto;
-                  outline: none;
-                  appearance: none;
-                  border: none;
-                  white-space: nowrap;
-                  padding: 0 1.5em;
-                }
-              }
-              
-            }
-
-            a {
-              display: inline-block;
-              margin-top: 2em;
-              font-size: 14px;
-              text-decoration: none;
-              color: #0F1F89;
-
-              &:hover {
-                text-decoration: underline;
-              }
+          a {
+            color: black;
+            font-weight: normal;
+            
+            &:hover {
+              color: $blue;
             }
           }
         }
       }
+
+      &--newsletter {
+        margin-top: 0;
+        align-items: flex-start;
+
+        .footer-block__newsletter {
+          text-align: right;
+
+          @include breakpoint(small) {
+            text-align: left;
+          }
+
+          .newsletter-form {
+            @include breakpoint(small) {
+              align-items: flex-start;
+            }
+
+            .field {
+
+              &__input {
+                width: auto;
+                margin-right: 20px;
+                padding: 0;
+                padding-left: 1em;
+                border-width: 1px;
+                border-color: #a3a3a3;
+                background-color: #FAFAFA;
+                box-shadow: none;
+
+                &:hover {
+                  border-color: #000;
+                }
+              }
+
+              &__label {
+                font-weight: normal;
+              }
+
+              &__button {
+                flex-shrink: 0;
+                position: relative;
+                // font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.25em;
+                background-color: black;
+                color: white;
+                width: auto;
+                outline: none;
+                appearance: none;
+                border: none;
+                white-space: nowrap;
+                padding: 0 1.5em;
+              }
+            }
+            
+          }
+
+          a {
+            display: inline-block;
+            margin-top: 2em;
+            font-size: 14px;
+            text-decoration: none;
+            color: #0F1F89;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
     
 
     &__list-social {
@@ -335,6 +339,12 @@ input, textarea, keygen, select, button {
       border: none;
     }
 
+    &__column--info {
+      @include breakpoint(small) {
+        padding: 0;
+      }
+    }
+
     &__copyright {
       &.caption {
         font-size: 12px;
@@ -343,6 +353,10 @@ input, textarea, keygen, select, button {
         letter-spacing: 0.25em;
         color: black;
         margin-top: 4em;
+
+        @include breakpoint(small) {
+          font-size: 9px;
+        }
       }
     }
   }
@@ -526,6 +540,8 @@ input, textarea, keygen, select, button {
   }
 }
 
+
+
 .featured-product {
   align-items: center;
 
@@ -593,6 +609,7 @@ input, textarea, keygen, select, button {
     flex-direction: column;
     align-items: center;
   }
+
 
   .product-form__input {
     display: flex;
@@ -724,11 +741,26 @@ input, textarea, keygen, select, button {
   &__title {
     font-size: 14px;
     color: black;
-    font-weight: bold;
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  .price {
+    font-weight: normal;
   }
 
   &__description {
     font-size: 14px;
+    font-weight: normal;
+  }
+
+  .product-form {
+    &__buttons {
+      max-width: 25rem;
+    }
+  }
+
+  .share-button__button {
     font-weight: normal;
   }
 
@@ -737,6 +769,18 @@ input, textarea, keygen, select, button {
       font-size: 10px !important;
       padding: 5px !important;
       border-radius: 0 !important;
+    }
+  }
+
+  .product__modal-opener {
+    border: none !important;
+
+    .product__media-icon {
+      // display: none;
+    }
+
+    .product__media-toggle:hover {
+      // cursor: default;
     }
   }
 }
@@ -874,4 +918,21 @@ input, textarea, keygen, select, button {
 
 input, button, select, textarea {
   font-family: var(--font-body-family);
+}
+
+.title-wrapper-with-link {
+  font-size: 1.4rem;
+}
+
+cart-items {
+  padding-top: 40px !important;
+}
+
+.cart-item {
+  &__details {
+    a, .product-option {
+      text-transform: none;
+      font-weight: normal;
+    }
+  }
 }
