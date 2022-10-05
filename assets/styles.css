@@ -106,6 +106,7 @@ h6,
 
 #shopify-section-footer .footer {
   border: none;
+  margin-top: 100px;
 }
 #shopify-section-footer .footer__blocks-wrapper {
   flex-grow: 1;
@@ -490,8 +491,16 @@ h6,
 .product-grid .card-information {
   text-align: center;
 }
+.product-grid .card-information + .card {
+  margin-bottom: 0;
+}
+.product-grid .card-information__text {
+  text-transform: none;
+  font-weight: normal;
+}
 .product-grid .card-information .price {
   justify-content: center;
+  font-weight: normal;
 }
 
 .product-slideshow {

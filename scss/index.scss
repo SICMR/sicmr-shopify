@@ -188,6 +188,7 @@ input, textarea, keygen, select, button {
 #shopify-section-footer {
   .footer {
     border: none;
+    margin-top: 100px;
 
       &__blocks-wrapper {
         flex-grow: 1;
@@ -674,8 +675,18 @@ input, textarea, keygen, select, button {
   .card-information {
     text-align: center;
 
+    &+ .card {
+      margin-bottom: 0;
+    }
+    
+    &__text {
+      text-transform: none;
+      font-weight: normal;
+    }
+
     .price {
       justify-content: center;
+      font-weight: normal;
     }
   }
 }
