@@ -62,6 +62,7 @@ h6,
   text-transform: uppercase;
   color: black;
   letter-spacing: 0.25em;
+  padding-left: 0;
 }
 #shopify-section-header .header-wrapper .header__search {
   display: none;
