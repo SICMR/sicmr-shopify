@@ -723,3 +723,8 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+
+// trigger a resize event once the window is loaded, it refresh the Flickity slider on resize
+window.onload = function(){
+  window.dispatchEvent(new Event('resize'));
+}
