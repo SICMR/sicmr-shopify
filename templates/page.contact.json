@@ -3,7 +3,7 @@
     "form": {
       "type": "contact-form",
       "settings": {
-        "heading": "SUBMIT A REQUEST"
+        "heading": "SUBMIT A REQUEST:"
       }
     }
   },
