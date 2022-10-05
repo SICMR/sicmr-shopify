@@ -13,6 +13,7 @@
     "social_instagram_link": "http:\/\/instagram.com\/shopify",
     "social_tumblr_link": "https:\/\/marsargo.tumblr.com",
     "social_youtube_link": "https:\/\/www.youtube.com\/shouldicleanmyroom",
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
