@@ -457,6 +457,7 @@ h6,
 
 .main-page {
   max-width: 870px;
+  padding-top: 40px;
 }
 .main-page .main-page-title {
   color: #010101;
@@ -585,6 +586,7 @@ h6,
 
 .faqs {
   max-width: 1300px;
+  padding-top: 1px;
 }
 .faqs .title {
   font-weight: bold;
