@@ -44,7 +44,7 @@
                     <ul class="footer-block__details-content list-unstyled">
                       {%- for link in block.settings.menu.links -%}
                         <li class="footer-page-link" data-slug="{{ link.url }}">
-                          <a href="{{link.url }}">{{ link.title }}</a>
+                          <a href="{{link.url }}" {% if link.type == 'http_link' %}target="_blank"{% endif %}>{{ link.title }}</a>
                         </li>
                       {%- endfor -%}
                     </ul>
