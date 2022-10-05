@@ -258,7 +258,7 @@ input, textarea, keygen, select, button {
                 }
 
                 &__label {
-                  
+                  font-weight: normal;
                 }
 
                 &__button {
@@ -282,11 +282,11 @@ input, textarea, keygen, select, button {
             }
 
             a {
-              display: block;
+              display: inline-block;
               margin-top: 2em;
               font-size: 14px;
               text-decoration: none;
-              color: black;
+              color: #0F1F89;
 
               &:hover {
                 text-decoration: underline;
@@ -843,6 +843,6 @@ input, textarea, keygen, select, button {
   }
 }
 
-input {
+input, button, select, textarea {
   font-family: var(--font-body-family);
 }

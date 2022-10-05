@@ -162,6 +162,9 @@ h6,
   padding: 0;
   padding-left: 1em;
 }
+#shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter .newsletter-form .field__label {
+  font-weight: normal;
+}
 #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter .newsletter-form .field__button {
   flex-shrink: 0;
   position: relative;
@@ -180,11 +183,11 @@ h6,
   padding: 0 1.5em;
 }
 #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter a {
-  display: block;
+  display: inline-block;
   margin-top: 2em;
   font-size: 14px;
   text-decoration: none;
-  color: black;
+  color: #0F1F89;
 }
 #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter a:hover {
   text-decoration: underline;
@@ -619,6 +622,6 @@ h6,
   margin-right: 0.5em;
 }
 
-input {
+input, button, select, textarea {
   font-family: var(--font-body-family);
 }
