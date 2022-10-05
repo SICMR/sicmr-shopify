@@ -161,6 +161,13 @@ h6,
   margin-right: 20px;
   padding: 0;
   padding-left: 1em;
+  border-width: 1px;
+  border-color: #a3a3a3;
+  background-color: #FAFAFA;
+  box-shadow: none;
+}
+#shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter .newsletter-form .field__input:hover {
+  border-color: #000;
 }
 #shopify-section-footer .footer .footer-block--newsletter .footer-block__newsletter .newsletter-form .field__label {
   font-weight: normal;
@@ -169,6 +176,7 @@ h6,
   flex-shrink: 0;
   position: relative;
   font-weight: bold;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   background-color: black;
@@ -527,6 +535,7 @@ h6,
 
 .contact {
   max-width: 1040px;
+  padding-top: 1px;
 }
 .contact .title {
   font-weight: bold;
@@ -541,10 +550,14 @@ h6,
 }
 .contact .contact-form .field input, .contact .contact-form .field textarea {
   order: 2;
-  border-radius: 3px;
   border-width: 1px;
+  border-color: #a3a3a3;
   background-color: #FAFAFA;
   padding: 1.5rem;
+  box-shadow: none;
+}
+.contact .contact-form .field input:hover, .contact .contact-form .field textarea:hover {
+  border-color: #000;
 }
 .contact .contact-form .field label {
   position: unset;
@@ -558,7 +571,7 @@ h6,
 .contact .contact-form .field .secondary-label {
   order: 3;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   color: #4D4D4D;
   letter-spacing: 0.1em;
   margin-top: 0.25em;
